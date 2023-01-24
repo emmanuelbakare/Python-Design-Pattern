@@ -1,0 +1,12 @@
+[2023-01-24 16:57:52.190472] - INFO: This is an information
+[2023-01-24 16:57:52.191470] - WARNING: Warning of a impending danger
+[2023-01-24 16:57:52.193464] - ERROR: This is an error
+[2023-01-24 16:57:52.194461] - CRITICAL: This is a critical Mistake
+[2023-01-24 17:01:15.489815] - INFO: This is an information
+[2023-01-24 17:01:15.490812] - WARNING: Warning of a impending danger
+[2023-01-24 17:01:15.491810] - ERROR: This is an error
+[2023-01-24 17:01:15.493804] - CRITICAL: This is a critical Mistake
+[2023-01-24 17:01:15.499791] - INFO: 2. --- This is an information
+[2023-01-24 17:01:15.501790] - WARNING: 2. --- Warning of a impending danger
+[2023-01-24 17:01:15.503778] - ERROR: 2. --- This is an error
+[2023-01-24 17:01:15.503778] - CRITICAL: 2. --- This is a critical Mistake
