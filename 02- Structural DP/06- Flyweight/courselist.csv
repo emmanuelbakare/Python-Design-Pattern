@@ -1,0 +1,32 @@
+﻿Sno,Course,Days,Participants
+1,Computer Appreciation ,5,10
+2,Database Administration and Design,5,10
+3,"Web Design - HTML, CSS, Javascript",5,10
+4,Frontend Application Dev with React,5,10
+5,Frontend Application Dev with Vue,5,10
+6,"Develop web, Desktop and Mobile Application using Quasar Framework",10,10
+7,Programming with Java,5,10
+8,Programming with Python,5,10
+9,Programming with Golang,5,10
+10,Programming with Nodejs,5,10
+11,Programming with Javascript,5,10
+12,Programming with PHP,5,10
+13,Programming with C#.net,5,10
+14,Web Application Development with Django,10,10
+15,REST API development with Django Rest Framework,5,10
+16,Wordpress Content Management Design,3,10
+17,Drupal Content Management ,5,10
+18,Advanced Drupal Content Management ,5,10
+19,Learning Management System with Moodle,5,10
+20,Data Analysis and Business Intelligence with Excel,,
+21,Pandas Essentials for Data Analysis in Python,5,10
+22,Numpy Essentials for Data Analysis in Python,5,10
+23,Version Control - Git & Github,5,10
+24,Complete Devops Engineeering,10,10
+25,Devop  - Docker,5,10
+26,Devop  - Ansible,5,10
+27,Devops - Amazon Web Services,5,10
+28,Software Engineering Essentials,5,10
+29,Software Engineering - Design Pattern,5,10
+30,Software Engineering - Algorithm and Data Structure,5,10
+31,"System Designs (Availability, System API interfaces, Load Balancing, Hasghing, Proxy, Cache, Latency etc)",5,10
