@@ -1,0 +1,17 @@
+
+Alice chatroom Logs
+********************
+Alice: Hi Guys are you there!
+Deji: Hi Alice i'm cool. Whats Up!.
+Bryan: I'm a little busy guys, I'll chat you up later.
+Alice: Ok Bryan. Deji, whats your thought about fuel subsidy removal?
+
+Alice chatroom Logs
+********************
+Andrew: Hello group, can we chat about our best programming languages?
+Alice: Sure, I love Python
+Kerry: Yes, Python it is for me, easy to learn with lots of great libraries
+Alice: Python is a one stop shop for several application, just name it, python's got it
+Kerry: Sure, I do alot of data analysis with Pandas and Numpy in Python
+Andrew: Yea, I mostly use Django  for web development and API development
+Deji: Python lovers, you guys wont let us rest. Here we go again... whatever.
