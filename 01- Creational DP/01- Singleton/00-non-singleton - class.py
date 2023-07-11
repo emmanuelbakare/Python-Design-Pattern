@@ -1,12 +1,12 @@
 class NoneSingleton:
+    def __init__(self, name):
+        self.name = name 
 
-    def __init__(self):
-        self.name = "None Singleton" 
-
-
-ns1 = NoneSingleton()
-ns2 = NoneSingleton()
+ns1 = NoneSingleton("Boy")
+ns2 = NoneSingleton("Girl")
 
 print(ns1, ns2)
 
-print(ns1 is ns2)
+print(ns1 is ns2) 
+
+print(f"ns1: {ns1.name}, ns2: {ns2.name}")

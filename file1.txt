@@ -1,0 +1,8 @@
+[2023-07-04 14:37:26.539134] - INFO: This is an information
+[2023-07-04 14:37:26.544955] - WARNING: Warning of a impending danger
+[2023-07-04 14:37:26.545952] - ERROR: This is an error
+[2023-07-04 14:37:26.547947] - CRITICAL: This is a critical Mistake
+[2023-07-04 14:37:26.549099] - INFO: 2. --- This is an information
+[2023-07-04 14:37:26.549943] - WARNING: 2. --- Warning of a impending danger
+[2023-07-04 14:37:26.550971] - ERROR: 2. --- This is an error
+[2023-07-04 14:37:26.551936] - CRITICAL: 2. --- This is a critical Mistake
