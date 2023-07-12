@@ -1,32 +1,37 @@
 ```mermaid
 classDiagram
-    class AbstractProduct {
-        + operation(): str
+    class Creator {
+        + factory_method(): Product
+        + operation(): void
     }
 
-    AbstractProduct <|-- ConcreteProduct1
-    AbstractProduct <|-- ConcreteProduct2
+    class Product {
+        + operation(): void
+    }
+
+    class ConcreteCreator1 {
+        + factory_method(): Product
+    }
+
+    class ConcreteCreator2 {
+        + factory_method(): Product
+    }
 
     class ConcreteProduct1 {
-        + operation(): str
+        + operation(): void
     }
 
     class ConcreteProduct2 {
-        + operation(): str
+        + operation(): void
     }
 
-    class Creator {
-        - factory: dict
-        + __init__()
-        + create_product(product_name: str): AbstractProduct
-    }
+    Creator <|-- ConcreteCreator1
+    Creator <|-- ConcreteCreator2
+    Product <|-- ConcreteProduct1
+    Product <|-- ConcreteProduct2
+    ConcreteCreator1 --> ConcreteProduct1: creates
+    ConcreteCreator2 --> ConcreteProduct2: creates
 
-    Creator --> "1..1" AbstractProduct: uses
-    Creator --> "0..*" ConcreteProduct1: uses
-    Creator --> "0..*" ConcreteProduct2: uses
-
-    AbstractProduct --> ConcreteProduct1: extends
-    AbstractProduct --> ConcreteProduct2: extends
 
 
 ```

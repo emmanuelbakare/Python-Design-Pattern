@@ -1,45 +1,54 @@
 ```mermaid
 classDiagram
-    class AbstractProduct {
-        +operation()
-    }
-
-    class ConcreteProduct1 {
-        +operation()
-    }
-
-    class ConcreteProduct2 {
-        +operation()
-    }
-
-    class ConcreteProduct3 {
-        +operation()
-    }
-
-    
     class AbstractFactory {
-        +create_product()
+        + create_product_a(): AbstractProductA
+        + create_product_b(): AbstractProductB
     }
 
-    class ConcreteFactoryNum {
-        -factory: dict
-        +create_product(product_name)
+    class AbstractProductA {
+        + operation_a(): void
     }
 
-    class ConcreteFactoryNum2{
-        -factory: dict
-        +create_product(product_name)
+    class AbstractProductB {
+        + operation_b(): void
     }
 
-    AbstractProduct <|-- ConcreteProduct1
-    AbstractProduct <|-- ConcreteProduct2
-    AbstractProduct <|-- ConcreteProduct3
-    AbstractFactory <|-- ConcreteFactoryNum
-    AbstractFactory <|-- ConcreteFactoryNum2
-    ConcreteFactoryNum --> ConcreteProduct1
-    ConcreteFactoryNum --> ConcreteProduct2
-    ConcreteFactoryNum2 --> ConcreteProduct2
-    ConcreteFactoryNum2--> ConcreteProduct3
-    
+    class ConcreteFactory1 {
+        + create_product_a(): AbstractProductA
+        + create_product_b(): AbstractProductB
+    }
+
+    class ConcreteFactory2 {
+        + create_product_a(): AbstractProductA
+        + create_product_b(): AbstractProductB
+    }
+
+    class ConcreteProductA1 {
+        + operation_a(): void
+    }
+
+    class ConcreteProductA2 {
+        + operation_a(): void
+    }
+
+    class ConcreteProductB1 {
+        + operation_b(): void
+    }
+
+    class ConcreteProductB2 {
+        + operation_b(): void
+    }
+
+    AbstractFactory <|-- ConcreteFactory1
+    AbstractFactory <|-- ConcreteFactory2
+    AbstractProductA <|-- ConcreteProductA1
+    AbstractProductA <|-- ConcreteProductA2
+    AbstractProductB <|-- ConcreteProductB1
+    AbstractProductB <|-- ConcreteProductB2
+    ConcreteFactory1 --> ConcreteProductA1: creates
+    ConcreteFactory1 --> ConcreteProductB1: creates
+    ConcreteFactory2 --> ConcreteProductA2: creates
+    ConcreteFactory2 --> ConcreteProductB2: creates
+
 
 ```
