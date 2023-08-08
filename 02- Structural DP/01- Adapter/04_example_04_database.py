@@ -1,10 +1,8 @@
-from database.mysqldb import MySQLDatabase
-from database.postgresdb import PostgreSQLDatabase
+from database.mysqldb import MySQLDatabase #adaptee
+from database.postgresdb import PostgreSQLDatabase #adaptee
 
 
-# Define the Target interface
-
-class Database:
+class Database:  #target
     def insert(self, data):
         pass
 
@@ -16,6 +14,7 @@ class Database:
 
     def select(self, data):
         pass
+
 
 
 class MySQLAdapter(Database):
@@ -35,8 +34,6 @@ class MySQLAdapter(Database):
         self._adaptee.mysql_select(data)
 
 
-
-
 class PostgreAdapter(Database):
     def __init__(self, adaptee):
         self._adaptee = adaptee 
@@ -54,22 +51,14 @@ class PostgreAdapter(Database):
         self._adaptee.postgresql_select(data)
 
 
-
-
-
-
-
-
-
 if __name__=="__main__":
-    mysqldb = MySQLDatabase()
-    mysql_adapter = MySQLAdapter(mysqldb)
-    mysql_adapter.select("RECORD 1")
-    mysql_adapter.delete("RECORD 1")
+    mysql_adapter = MySQLAdapter(MySQLDatabase())
+    mysql_adapter.select("Record 1")
+    mysql_adapter.update("Record 1")
+    mysql_adapter.delete("Record 1")
 
-    postgres_db = PostgreSQLDatabase()
-    postgres_adapter = PostgreAdapter(postgres_db)
-
+    postgres_adapter = PostgreAdapter(PostgreSQLDatabase())
     postgres_adapter.select("RECORD 3")
     postgres_adapter.update("RECORD 4")
 
+    

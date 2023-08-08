@@ -30,13 +30,6 @@ class Menu:
         for item in self.items:
             item.ls() 
     
-    def ls_all(self):
-        print(self.name)
-        for item in self.items:
-            item.ls() 
-            if isinstance(item, Menu):
-                item.ls_all()
-
     
 # Create menu items
 item1 = MenuItem('item1')
@@ -54,7 +47,3 @@ menu2.add_item(item3)
 
 # List items in menus
 menu1.ls()
-
-print()
-# List all items in menu system
-menu1.ls_all()

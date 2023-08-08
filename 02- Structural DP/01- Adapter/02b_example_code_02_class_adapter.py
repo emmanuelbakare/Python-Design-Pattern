@@ -1,14 +1,30 @@
-class Adaptee:
-    def specific_request(self):
-        return "Specific request"
+class Service:
+    def request(self):
+        return "Get service from provider"
+    
+class Adaptee: 
+    def complex_request(self):
+        return "Get complex request from Service Provider"
+    
+
+class Adaptee2:
+    def requested(self):
+        return "Get REQUESTED service from provider"
     
 class Target:
     def request(self):
-        return "Target request"
+        pass
 
-class Adapter(Adaptee, Target):
+class Adapter(Target, Adaptee, Adaptee2):
+    # def __init__(self, adaptee):
+    #     self.adaptee = adaptee
+
     def request(self):
-        return f"Adapter request ({self.specific_request()})"
+        return f"Adaptee1: {self.complex_request()}\nAdaptee 2: {self.requested()}"
+    
+
+service= Service()
+print(service.request())
 
 adapter = Adapter()
 print(adapter.request())

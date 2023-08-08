@@ -40,4 +40,15 @@ composite1 = Composite('Composite 1')
 composite1.add(leaf1)
 composite1.add(leaf2)
 
+composite2 = Composite('Composite 2')
+leaf3 = Component('Leaf 3')
+leaf4 = Component('Leaf 4')
+leaf5 = Component('Leaf 5')
+
+composite2.add(leaf3)
+composite2.add(leaf4)
+composite2.add(leaf5)
+
+composite1.add(composite2)
+
 composite1.operation()
