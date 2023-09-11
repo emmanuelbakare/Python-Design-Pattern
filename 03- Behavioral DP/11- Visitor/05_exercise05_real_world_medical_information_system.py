@@ -120,14 +120,16 @@ if __name__ == '__main__':
     medical_system.add_medical_data(test_results)
     medical_system.add_medical_data(medical_history)
 
-
-     # Process data using visitors
+    
+    # Process data using visitors
     analyzer = DataAnalyzer()
-    medical_system.process_data(analyzer) 
-
+    medical_system.process_data(analyzer)  
+    print()
     diagnoser = Diagnoser()
-    medical_system.process_data(diagnoser) 
+    medical_system.process_data(diagnoser)
 
 
+    print()
     record_processor = RecordProcessor()
     medical_system.process_data(record_processor)
+

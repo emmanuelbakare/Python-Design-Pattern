@@ -1,23 +1,28 @@
-class SubjectInterface:
+from abc import ABC, abstractmethod
+
+class SubjectInterface(ABC): # the subject
+    @abstractmethod
     def operation(self):
-        pass 
+        pass
 
-class Subject(SubjectInterface):
 
+
+class RealSubject(SubjectInterface): 
     def operation(self):
-        print("...Implementing The Operation")
+        print("Perform an Operation from Real Subject")
 
 
-class SubjectProxy(SubjectInterface):
-    def __init__(self, subject):
-        self._subject  = subject 
 
+class ProxySubject(SubjectInterface):
+    def __init__(self, real_subject):
+        self.real_subject = real_subject
+    
     def operation(self):
-        print("BEFORE Operation: check status")
-        self._subject.operation()
-        print("AFTER Operation: log status")
+        print("---Perform some other actions---")
+        self.real_subject.operation()
 
 
-proxy = SubjectProxy(Subject())
-
-proxy.operation()
+real_subject = RealSubject()
+# real_subject.operation()
+proxy_subject = ProxySubject(real_subject)
+proxy_subject.operation()

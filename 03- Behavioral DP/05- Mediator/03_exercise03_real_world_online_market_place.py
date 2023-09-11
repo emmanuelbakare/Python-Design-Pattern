@@ -19,7 +19,6 @@ class OnlineMarketplaceMediator:
         for buyer in self.buyers:
             buyer.receive_message(f"{seller} has listed {product}.")
 
-
 class Buyer:
     def __init__(self, name, mediator):
         self.name = name
@@ -30,7 +29,6 @@ class Buyer:
 
     def receive_message(self, message):
         print(f"Buyer {self.name} received message: {message}")
-
 
 class Seller:
     def __init__(self, name, mediator):
@@ -60,9 +58,11 @@ mediator.register_seller(seller2)
 mediator.register_buyer(buyer1)
 mediator.register_buyer(buyer2)
 
-
 seller1.list_product("Product A") 
+print()
 seller2.list_product("Product B")
 
+print()
 buyer1.express_interest("Product B")
+print()
 buyer2.express_interest("Product A")

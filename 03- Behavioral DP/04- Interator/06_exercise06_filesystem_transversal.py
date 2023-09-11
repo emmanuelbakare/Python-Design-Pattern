@@ -33,7 +33,7 @@ class FileSystemIterator(Iterator):
 class FileSystemTraversal:
     def __init__(self, root_directory):
         self.root_directory = root_directory
-
+    
     def traverse(self):
         return FileSystemIterator(self.root_directory)
     
@@ -44,5 +44,5 @@ file_system_traversal = FileSystemTraversal(root_directory)
 iterator = file_system_traversal.traverse()
 
 while iterator.has_next():
-    path = iterator.next()
+    path = iterator.next() 
     print(path)
